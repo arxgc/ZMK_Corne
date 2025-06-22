@@ -64,16 +64,20 @@
         MouseNav {
             display-name = "mouse";
             bindings = <
-                /* Row 1: placeholder */ &trans &trans &trans &trans &trans &trans
-                                             &trans &trans &trans &trans &trans &tog 0
+                /* Row 1: placeholder */
+                &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &tog 0
 
-                /* Row 2: movement */       &trans &trans &trans &trans &trans &trans
-                                             &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &trans
+                /* Row 2: movement */
+                &trans &trans &trans &trans &trans &trans
+                &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &trans
 
-                /* Row 3: scrolling */      &trans &trans &trans &trans &trans &trans
-                                             &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans &trans
+                /* Row 3: scroll up/down only */
+                &trans &trans &trans &trans &trans &trans
+                &trans &msc SCRL_DOWN &msc SCRL_UP &trans &trans &trans
 
-                /* Thumbs: click */          &trans &trans &trans &mkp MB1 &mkp MB2 &trans &trans
+                /* Thumbs: click */
+                &trans &trans &trans &mkp MB1 &mkp MB2 &trans &trans
             >;
         };
 
